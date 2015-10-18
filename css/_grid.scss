@@ -1,0 +1,367 @@
+.v-grid{
+	display: -webkit-box;    /* iOS 6-, Safari 3.1-6*/
+	display: -ms-flexbox;    /* IE 10 */
+	display: -webkit-flex;	 /* Safari 6.1+. iOS 7.1+, */
+	display: flex;			 /* Firefox, Chrome, Opera */
+	-ms-flex: none;			 /* None protože jinak flex nastaví všemu stejnou šířku aby se to vešlo akorát do gridu. */
+	-webkit-flex: none;
+	flex: none;	
+	-ms-flex-wrap: wrap;	 /* Pokud se více buněk nevejde na řádek, posune se na další */
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+  box-sizing: border-box;
+	:after{
+		clear: both;
+	}
+}
+/* Nefunguje pokud používate třídy .COL nebo .COL-REV, pouze s ROW nebo ROW-REV */
+.start{
+	justify-content: flex-start;		  /* Buňky jdou zleva */
+}
+.end{
+	justify-content: flex-end;		  /* Buňky jdou od konce(pravo) */
+}
+.center{
+	justify-content: center;		  /* Buňky jsou uprostřed gridu */
+}
+.spacebetween{
+	justify-content: space-between;			 /* Mezi buňkami v gridu se vytvoří mezery. Na krajích ovšem nejsou */
+}
+.spacearound{
+	justify-content: space-around;		  /* Mezi buňkami v gridu se vytvoří mezery. Na krajích také */ 
+}
+/* Řádky nebo sloupce  */
+.row{
+	flex-direction: row;		  /* Zleva doprava */
+}
+.row-rev{
+	flex-direction: row-reverse;		  /* Zprava doleva */
+}
+.col{
+	flex-direction: column;			 /* Shora dolů */
+}
+.col-rev{
+	flex-direction: column-reverse;			 /* Zdola nahoru */
+}
+/* Pro použití je potřeba přidat pro rodiče třídu .COL nebo .COL-REV */
+.alignstart{
+	align-items: flex-start;		  /* Shora dolů */
+}
+.alignend{
+	align-items: flex-end;			 /* Zdola nahoru */
+}
+.aligncenter{
+	align-items: center;			/* Uprostřed */
+}
+.alignbaseline{
+	align-items: baseline;			 /* Podle textu */
+}
+.alignstretch{
+	align-items: stretch;			/* Roztáhne se, stejně jako height = 100%; */
+}
+
+//XLarge
+@media (min-device-width: 1em) {
+  .v-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+
+}
+// Large
+@media (min-device-width: 64em) and (max-device-width: 75em) {
+  .v-large-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-large-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-large-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-large-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-large-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-large-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-large-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-large-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-large-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-large-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-large-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-large-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-large-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-large-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-large-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
+// Medium
+@media (min-device-width: 50em) and (max-device-width: 64em) {
+  .v-medium-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-medium-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-medium-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-medium-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-medium-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-medium-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-medium-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-medium-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-medium-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-medium-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-medium-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-medium-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-medium-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-medium-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-medium-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
+// Small 
+@media (max-device-width: 50em) {
+  .v-small-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-small-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-small-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-small-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-small-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-small-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-small-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-small-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-small-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-small-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-small-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-small-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-small-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-small-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-small-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
