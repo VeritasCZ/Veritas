@@ -1,12 +1,12 @@
 .v-grid{
-	display: -webkit-box;    /* iOS 6-, Safari 3.1-6*/
-	display: -ms-flexbox;    /* IE 10 */
-	display: -webkit-flex;	 /* Safari 6.1+. iOS 7.1+, */
-	display: flex;			 /* Firefox, Chrome, Opera */
-	-ms-flex: none;			 /* None protože jinak flex nastaví všemu stejnou šířku aby se to vešlo akorát do gridu. */
+	display: -webkit-box;    // iOS 6-, Safari 3.1-6
+	display: -ms-flexbox;    // IE 10 
+	display: -webkit-flex;	 // Safari 6.1+. iOS 7.1+, 
+	display: flex;			 // Firefox, Chrome, Opera 
+	-ms-flex: none;			 // None otherwise it changes width 
 	-webkit-flex: none;
 	flex: none;	
-	-ms-flex-wrap: wrap;	 /* Pokud se více buněk nevejde na řádek, posune se na další */
+	-ms-flex-wrap: wrap;	 // If it doenst fit, it goes on another line
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
   box-sizing: border-box;
@@ -14,53 +14,53 @@
 		clear: both;
 	}
 }
-/* Nefunguje pokud používate třídy .COL nebo .COL-REV, pouze s ROW nebo ROW-REV */
+// Doesnt work if you use classes .COL or .COL-REV, only with .ROW, .ROW-REV or just dont use any
 .start{
-	justify-content: flex-start;		  /* Buňky jdou zleva */
+	justify-content: flex-start;		  // From the start(left)
 }
 .end{
-	justify-content: flex-end;		  /* Buňky jdou od konce(pravo) */
+	justify-content: flex-end;		  // From the end(right)
 }
 .center{
-	justify-content: center;		  /* Buňky jsou uprostřed gridu */
+	justify-content: center;		  // Middle
 }
 .spacebetween{
-	justify-content: space-between;			 /* Mezi buňkami v gridu se vytvoří mezery. Na krajích ovšem nejsou */
+	justify-content: space-between;			 // Space between blocks but not on the sides.
 }
 .spacearound{
-	justify-content: space-around;		  /* Mezi buňkami v gridu se vytvoří mezery. Na krajích také */ 
+	justify-content: space-around;		  // Space between blocks even on sides.
 }
-/* Řádky nebo sloupce  */
+// row and collumn 
 .row{
-	flex-direction: row;		  /* Zleva doprava */
+	flex-direction: row;		  // left to right - default value
 }
 .row-rev{
-	flex-direction: row-reverse;		  /* Zprava doleva */
+	flex-direction: row-reverse;		  // right to left 
 }
 .col{
-	flex-direction: column;			 /* Shora dolů */
+	flex-direction: column;			 // top bottom
 }
 .col-rev{
-	flex-direction: column-reverse;			 /* Zdola nahoru */
+	flex-direction: column-reverse;			 // bottom top
 }
-/* Pro použití je potřeba přidat pro rodiče třídu .COL nebo .COL-REV */
+// Only works if you add classes .COL or .COL-REV 
 .alignstart{
-	align-items: flex-start;		  /* Shora dolů */
+	align-items: flex-start;		  // top bottom
 }
 .alignend{
-	align-items: flex-end;			 /* Zdola nahoru */
+	align-items: flex-end;			 // bottom top
 }
 .aligncenter{
-	align-items: center;			/* Uprostřed */
+	align-items: center;			// Middle
 }
 .alignbaseline{
-	align-items: baseline;			 /* Podle textu */
+	align-items: baseline;			 // According to baseline
 }
 .alignstretch{
-	align-items: stretch;			/* Roztáhne se, stejně jako height = 100%; */
+	align-items: stretch;			// Stretches like height 100%
 }
 
-//XLarge
+// XLarge
 @media (min-device-width: 1em) {
   .v-width-1-1{
     width: 100%;
