@@ -3,8 +3,10 @@
 	flex: none;  // None, otherwise it changes width
 	flex-wrap: wrap;	 // If it doenst fit, it goes on another line
   box-sizing: border-box;
-	:after{
+	&:after{
 		clear: both;
+    display: table;
+    content: "";
 	}
 }
 // Doesnt work if you use classes .COL or .COL-REV, only with .ROW, .ROW-REV or just dont use any

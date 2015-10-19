@@ -16,31 +16,23 @@ $font-s: 16px;
     right: 0;
     position: fixed;  
     overflow-y: auto;
-    z-index: 1000; 
-
-    // Move/Posun //
-	
-    -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
+    z-index: 1000;  
+    // Move //
     transform: translateX(-100%);
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
 }
 // Offcanvas right/Pravá strana //
 #v-offcanvas.v-flip{
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
     left: auto;
     right: 0;
 }
 // Return/návrat //
 #v-offcanvas.v-active{
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
     transform: translateX(0);
 }
 
-// DESIGN - You can delete this //
+/* DESIGN - You can delete this */
 #v-offcanvas{
     background-color: $primary-color;
     border-right: 1px solid rgba(0,0,0,0.3);
@@ -70,8 +62,8 @@ $font-s: 16px;
         }
     }
 }
-
-@media (max-device-width: 1024px) {
+// Medium 48em = 768px
+@media screen and (min-width: 48em) {
     #v-offcanvas{
         width: 100%;
     }

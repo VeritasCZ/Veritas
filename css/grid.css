@@ -11,8 +11,10 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   box-sizing: border-box; }
-  .v-grid :after {
-    clear: both; }
+  .v-grid:after {
+    clear: both;
+    display: table;
+    content: ""; }
 
 .start {
   -webkit-box-pack: start;
