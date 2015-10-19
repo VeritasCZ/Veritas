@@ -1,0 +1,15 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0,0,0,0.1);
+	font-size: 20px;
+}
+html{
+	min-height: 3000px;
+}
+body{
+	min-height: 2000px;
+}
+p{
+	margin-bottom: 20px;
+}

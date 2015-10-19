@@ -1,0 +1,4 @@
+$primary-color: #212121;
+$secondary-color: #f1f1f1;
+$primary-color-lighten: lighten($primary-color, 10%);
+$primary-color-darken: darken($primary-color, 10%);

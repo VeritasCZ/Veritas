@@ -2,11 +2,8 @@
 * Create div with ID v-offcanvas
 * Create button or link with class v-toggle-offcanvas
 ****************************************************** */
-$primary-color: #212121;
-$secondary-color: #f1f1f1;
-$primary-color-lighten: lighten($primary-color, 10%);
-$primary-color-darken: darken($primary-color, 10%);
-$font-s: 16px;
+@import "variables";
+$font-s: 1.6rem;
 // Change carefully ! //
 #v-offcanvas {
     width: 20%;
