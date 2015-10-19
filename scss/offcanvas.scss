@@ -1,0 +1,78 @@
+/* ******************************************************
+* Create div with ID v-offcanvas
+* Create button or link with class v-toggle-offcanvas
+****************************************************** */
+$primary-color: #212121;
+$secondary-color: #f1f1f1;
+$primary-color-lighten: lighten($primary-color, 10%);
+$primary-color-darken: darken($primary-color, 10%);
+$font-s: 16px;
+// Change carefully ! //
+#v-offcanvas {
+    width: 20%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: fixed;  
+    overflow-y: auto;
+    z-index: 1000; 
+
+    // Move/Posun //
+	
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+// Offcanvas right/Pravá strana //
+#v-offcanvas.v-flip{
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    left: auto;
+    right: 0;
+}
+// Return/návrat //
+#v-offcanvas.v-active{
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+// DESIGN - You can delete this //
+#v-offcanvas{
+    background-color: $primary-color;
+    border-right: 1px solid rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    ul{
+        margin: 0;
+        padding: 0;
+        li{
+            a{
+                font-size: $font-s;
+                color: $secondary-color;
+                background-color: $primary-color;
+                padding: 5%;
+                border-top: 1px solid rgba(0,0,0,.3);
+                box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
+                text-shadow: 0 1px 0 rgba(0,0,0,.5);
+                text-decoration: none;
+                display: block;
+                &:hover, &:focus{
+                    background-color: $primary-color-lighten;
+                    transition: 0.3s;
+                }
+            }
+            .active{
+                background-color: $primary-color-darken;
+            }
+        }
+    }
+}
+
+@media (max-device-width: 1024px) {
+    #v-offcanvas{
+        width: 100%;
+    }
+}

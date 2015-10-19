@@ -1,0 +1,359 @@
+.v-grid{
+	display: flex;			 // Firefox, Chrome, Opera support
+	flex: none;  // None, otherwise it changes width
+	flex-wrap: wrap;	 // If it doenst fit, it goes on another line
+  box-sizing: border-box;
+	:after{
+		clear: both;
+	}
+}
+// Doesnt work if you use classes .COL or .COL-REV, only with .ROW, .ROW-REV or just dont use any
+.start{
+	justify-content: flex-start;		  // From the start(left)
+}
+.end{
+	justify-content: flex-end;		  // From the end(right)
+}
+.center{
+	justify-content: center;		  // Middle
+}
+.spacebetween{
+	justify-content: space-between;			 // Space between blocks but not on the sides.
+}
+.spacearound{
+	justify-content: space-around;		  // Space between blocks even on sides.
+}
+// row and collumn 
+.row{
+	flex-direction: row;		  // left to right - default value
+}
+.row-rev{
+	flex-direction: row-reverse;		  // right to left 
+}
+.col{
+	flex-direction: column;			 // top bottom
+}
+.col-rev{
+	flex-direction: column-reverse;			 // bottom top
+}
+// Only works if you add classes .COL or .COL-REV 
+.alignstart{
+	align-items: flex-start;		  // top bottom
+}
+.alignend{
+	align-items: flex-end;			 // bottom top
+}
+.aligncenter{
+	align-items: center;			// Middle
+}
+.alignbaseline{
+	align-items: baseline;			 // According to baseline
+}
+.alignstretch{
+	align-items: stretch;			// Stretches like height 100%
+}
+
+// Small 30em = 480px
+@media screen and (min-width: 30em) {
+  .v-small-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-small-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-small-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-small-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-small-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-small-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-small-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-small-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-small-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-small-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-small-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-small-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-small-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-small-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-small-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
+// Medium 48em = 768px
+@media screen and (min-width: 48em) {
+  .v-medium-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-medium-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-medium-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-medium-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-medium-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-medium-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-medium-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-medium-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-medium-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-medium-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-medium-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-medium-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-medium-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-medium-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-medium-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
+// Large 64em = 1024px
+@media screen and (min-width: 64em) {
+  .v-large-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-large-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-large-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-large-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-large-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-large-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-large-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-large-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-large-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-large-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-large-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-large-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-large-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-large-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-large-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
+// XLarge 80em = 1280px
+@media screen and (min-width: 80em) {
+  .v-width-1-1{
+    width: 100%;
+  }
+  @for $i from 1 through 1{
+    .v-width-#{$i}-2{
+      width: ((100 / 2) * $i) *1%;
+    }
+  }
+  @for $i from 1 through 2 {
+    .v-width-#{$i}-3 {
+      width: ((100 / 3) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 3 {
+    .v-width-#{$i}-4 {
+      width: ((100 / 4) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 4 {
+    .v-width-#{$i}-5 {
+      width: ((100 / 5) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 5 {
+    .v-width-#{$i}-6 {
+      width: ((100 / 6) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 6 {
+    .v-width-#{$i}-7 {
+      width: ((100 / 7) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 7 {
+    .v-width-#{$i}-8 {
+      width: ((100 / 8) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 8 {
+    .v-width-#{$i}-9 {
+      width: ((100 / 9) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 9 {
+    .v-width-#{$i}-10 {
+      width: ((100 / 10) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 10 {
+    .v-width-#{$i}-11 {
+      width: ((100 / 11) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 11 {
+    .v-width-#{$i}-12 {
+      width: ((100 / 12) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 12 {
+    .v-width-#{$i}-13 {
+      width: ((100 / 13) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 13 {
+    .v-width-#{$i}-14 {
+      width: ((100 / 14) * $i) * 1%;
+    }
+  }
+  @for $i from 1 through 14 {
+    .v-width-#{$i}-15 {
+      width: ((100 / 15) * $i) * 1%;
+    }
+  }
+}
