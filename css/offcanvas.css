@@ -2,6 +2,12 @@
 * Create div with ID v-offcanvas
 * Create button or link with class v-toggle-offcanvas
 ****************************************************** */
+/*	Import something */
+/* IMPORT FONT */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext);
+/* COLOR */
+/* FONT */
+/* TRANSITION */
 #v-offcanvas {
   width: 20%;
   height: 100vh;

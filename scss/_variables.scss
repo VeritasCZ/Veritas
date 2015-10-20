@@ -1,4 +1,44 @@
-$primary-color: #212121;
-$secondary-color: #f1f1f1;
+/*	Import something */
+/* IMPORT FONT */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,latin-ext);
+
+/* COLOR */
+
+$black: #212121;
+$white: #f1f1f1;
+$orange: #D75C37;
+$red: #F44336;
+$redmenu: #C61414;
+$blue: #2196F3;
+$teal: #004D40;
+$brown: #795548;
+$green: #0c7926;
+$blue-gray: #607D8B;
+
+// Primary and secondary colors
+$primary-color: $black;
+$secondary-color: $white;
+// Dark and light primary color
 $primary-color-lighten: lighten($primary-color, 10%);
 $primary-color-darken: darken($primary-color, 10%);
+
+// Dark and light secondary color
+$secondary-color-lighten: lighten($secondary-color, 10%);
+$secondary-color-darken: darken($secondary-color, 10%);
+
+/* FONT */
+
+$base-font-family: 'Open Sans';
+$base-text-color: $black;
+$base-font-weight: normal;
+$base-font-size: 1.6rem;
+$base-line-height: $base-font-size + 1rem;
+// WEIGHT
+$weight-light: 300;
+$weight-regular: normal;
+$weight-bold: 700;
+
+/* TRANSITION */
+$base-transition-slow: 0.6s;
+$base-transiton: 0.3s;
+$base-transition-fast: 0.15s;

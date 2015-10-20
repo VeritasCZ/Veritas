@@ -1,0 +1,84 @@
+/* *******************************************
+					@EXTEND                    
+******************************************* */
+// Center block
+/* @extend %center-block; */
+%center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+/* @extend %clearfix; */
+
+%clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* ===============================================
+					@INCLUDE                    
+=============================================== */
+
+// Absolute
+/* @include absolute(10px, 10px, 5px, 15px); */
+
+@mixin position ($position: relative, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: $position;
+}
+
+// Shadow
+/* @include shadow(inset, 0px, 0px, 50px, -10px,rgba(0,0,0,0.1)); */
+@mixin shadow($type, $hor, $ver, $blur, $spread, $color){
+	-webkit-box-shadow: $type $hor $ver $blur $spread $color;
+	-moz-box-shadow: $type $hor $ver $blur $spread $color;
+	box-shadow: $type $hor $ver $blur $spread $color;
+}
+
+// Box-sizing
+/* @include box-sizing(border-box); */
+@mixin box-sizing($box-model) {
+	-webkit-box-sizing: $box-model; // Safari <= 5
+	-moz-box-sizing: $box-model; // Firefox <= 19
+	box-sizing: $box-model;
+}
+
+// Opacity
+/* @include opacity(0.8); */
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Responsivity for mobile tablet pc
+/* @include breakpoint(large) { width: 60%; }
+   @include breakpoint(medium) { width: 80%; }
+   @include breakpoint(small) { width: 95%; } */
+
+@mixin breakpoint($point) {
+	@if $point == large {
+		@media (min-device-width: 64em) and (max-device-width: 75em) { @content; }
+	}
+	@else if $point == xlarge {
+		@media (min-device-width: 75em) { @content;}
+	}
+	@else if $point == medium {
+		@media (min-device-width: 50em) and (max-device-width: 64em) { @content; }
+	}
+	@else if $point == small {
+		@media (max-device-width: 50em) { @content; }
+	}
+}
